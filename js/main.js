@@ -169,7 +169,6 @@ function highlight (tags) {
         appendTo(elems.photo_container).
         css({
           position: 'absolute',
-          zIndex: 10000000,
           left: pos[0] * ratio.width,
           top: pos[1] * ratio.height,
           width: (pos[2] - pos[0]) * ratio.width,

@@ -15,13 +15,22 @@
 </head>
 <body>
 
-<div id="main" class="clearfix">
-  <div id="sidebar">
-    <input type="text" id="search" onkeyup="find_name(this.value)" placeholder="name + ENTER = &#9829;" autofocus />
-    <ol id="results"></ol>
+<div id="main">
+  <div id="content" class="clearfix">
+    <div id="sidebar">
+      <input type="text" id="search" onkeyup="find_name(this.value)" placeholder="name + ENTER = &#9829;" autofocus />
+      <ol id="results"></ol>
+    </div>
+
+    <div id="photo-container" loading="Image is loading ... patiance please"></div>
   </div>
 
-  <div id="photo-container" loading="Image is loading ... patiance please"></div>
+  <footer>
+    <a href="https://github.com/smirea/mozilla-monument" target="_blank">GitHub Repo</a>
+    <span id="developer" class="clearfix">
+      developed by <a href="mailto:steven.mirea@gmail.com">Stefan Mirea</a>
+    </span>
+  </footer>
 </div>
 
 </body>

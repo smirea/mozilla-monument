@@ -14,13 +14,17 @@ body {
 }
 
 #main {
+  margin: 10px auto 0 auto;
+  width: 800px;
+  padding: 0;
+}
+
+#content {
   -webkit-box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow:    0px 7px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow:         0px 7px 10px 0px rgba(0, 0, 0, 0.75);
   background: #fff;
-  margin: 10px auto 0 auto;
-  width: 800px;
-  padding: 0;
+  padding: 0;1
   opacity: 0.9;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
@@ -102,10 +106,32 @@ body {
 
 .overlay {
   position: absolute;
+  z-index: 9999;
   background: rgba(255, 50, 0, 0.4);
 }
 
 /**
+ * Footer stuff
+ */
+footer {
+  padding: 5px;
+  color: #eee;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+#developer {
+  float: right;
+}
+
+/** 
  * Clearfix
  */
 .clearfix:before, .clearfix:after {
