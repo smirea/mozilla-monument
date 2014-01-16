@@ -1,0 +1,122 @@
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main {
+  -webkit-box-shadow: 0px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow:    0px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow:         0px 7px 10px 0px rgba(0, 0, 0, 0.75);
+  background: #fff;
+  margin: 10px auto 0 auto;
+  width: 800px;
+  padding: 0;
+  opacity: 0.9;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#sidebar {
+  float: left;
+  width: 200px;
+}
+
+#search {
+  display: block;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 3px 5px 0px rgba(50, 50, 50, 0.5);
+  border: 0;
+  width: 100%;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 10pt;
+}
+
+#search:focus {
+  outline: 0;
+  background: #fff1d0;
+}
+
+#results {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.result {
+  display: block;
+  position: relative;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    0px 1px 1px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         0px 1px 1px 0px rgba(50, 50, 50, 0.5);
+  padding: 5px;
+  font-size: 8pt;
+  text-decoration: none;
+  color: #333;
+}
+
+.result:hover {
+  background: #feb628;
+}
+
+#photo-container {
+  position: relative;
+  float: left;
+  -webkit-box-shadow: -3px 0px 5px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    -3px 0px 5px 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         -3px 0px 5px 0px rgba(50, 50, 50, 0.5);
+  width: 600px;
+  min-height: 666px;
+}
+
+.loading:before {
+  display: block;
+  position: absolute;
+  z-index: 1000000;
+  top: 0;
+  left: 30%;
+  border-radius: 0 0 5px 5px;
+  border: 1px solid #ccc;
+  background: #feb628;
+  width: 40%;
+  padding: 5px;
+  font-size: 8pt;
+  text-align: center;
+  content: attr(loading);
+  overflow: hidden;
+}
+
+#photo-container img {
+  max-width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(255, 50, 0, 0.4);
+}
+
+/**
+ * Clearfix
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
