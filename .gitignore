@@ -2,3 +2,6 @@
 *.swp
 node_modules*
 *.sublime-workspace
+
+photos/*.txt
+photos/*.html
