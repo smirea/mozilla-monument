@@ -115,21 +115,20 @@ function find_name (str) {
   hashes.sort(function (a, b) { return a.dist - b.dist; });
   hashes = hashes.slice(0, max_results);
 
-  show_tags(hashes[0]);
-
   // Add all matches to the list
   hashes.forEach(function (hash) {
-    elems.results.append(
-      jq_element('li').
-        append(
-          jq_element('a').
-            attr({href:'javascript:void(0)'}).
-            addClass('result').
-            html(hash.str.join(' ')).
-            on('mouseenter', function () { show_tags(hash); })
-        )
+    var handle = jq_element('li').append(
+      jq_element('a').
+        attr({href:'javascript:void(0)'}).
+        addClass('result').
+        html(hash.str.join(' ')).
+        on('click', function () { show_tags(hash); })
     );
+    hash.handle = handle;
+    elems.results.append(handle);
   });
+
+  show_tags(hashes[0]);
 }
 
 /**
@@ -138,6 +137,11 @@ function find_name (str) {
  * @param  {Function} callback
  */
 function show_tags (hash, callback) {
+  // Highlight the current selection.
+  elems.results.find('.selected').removeClass('selected');
+  hash.handle.addClass('selected');
+
+  // Update photo and show the name.
   set_face(dir.photos + hash.file, function () {
     var tags = $();
     for (var i=0; i<hash.str.length; ++i) {

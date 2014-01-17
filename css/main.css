@@ -72,6 +72,11 @@ body {
   background: #feb628;
 }
 
+.selected {
+  background: lightgreen;
+  font-weight: bold;
+}
+
 #photo-container {
   position: relative;
   float: left;
